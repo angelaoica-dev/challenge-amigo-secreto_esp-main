@@ -29,6 +29,17 @@ function mostrarAmigos() {
     amigos.forEach((amigo) => {let li = document.createElement("li"); li.textContent = amigo; lista.appendChild(li);});
 }
 
+function reiniciarSorteo() {
+  amigos.length = 0; // Vacía el array sin crear uno nuevo
+
+  // Limpiar listas del DOM
+  document.getElementById("listaAmigos").innerHTML = "";
+  document.getElementById("resultado").innerHTML = "";
+
+  // Ocultar el botón de reinicio
+  document.getElementById("button-reset").style.display = "none";
+}
+
 function sortearAmigo() {
     let resultado = document.getElementById("resultado");
 
@@ -41,4 +52,6 @@ function sortearAmigo() {
     let nombreSorteado = amigos[indiceAleatorio];
 
     resultado.innerHTML = `<li>🎉 El amigo secreto es: <strong>${nombreSorteado}</strong></li>`;    
+    // Mostrar el botón de reinicio
+  document.getElementById("button-reset").style.display = "flex";
 }
