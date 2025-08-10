@@ -6,6 +6,8 @@
     --color-button-hover: #e55720;
     --color-text: #444444;
     --color-white: #FFFFFF;
+    --color-reset: #00BFA6;
+    --color-reset-hover: #009e89;
 }
 
 /* Estilos generales */
@@ -151,6 +153,7 @@ ul {
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    margin-bottom: 20px;
 }
 
 .button-draw img {
