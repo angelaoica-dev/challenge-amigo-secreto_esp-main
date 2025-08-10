@@ -12,11 +12,19 @@ function agregarAmigo(){
        return; 
     }
         
-    //Agregar el nombre al array de amigos
+    //Agregar el nombre al array de amigos.
     amigos.push(nombre);
     
-    //Mostrar la lista actualizada
+    //Mostrar la lista actualizada.
     mostrarAmigos();
 
     input.value = "";
-    }
+}
+
+function mostrarAmigos(){
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = ""; //Limpiar lista antes de actualizarla.
+    
+    //Recorrer el array y crear un <li> por cada amigo.
+    amigos.forEach((amigo) => {let li = document.createElement("li"); li.textContent = amigo; lista.appendChild(li);});
+}
